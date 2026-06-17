@@ -1,0 +1,9 @@
+---
+- name: Deploy Maven Artifact
+  hosts: localhost
+
+  tasks:
+    - name: Copy generated jar
+      copy:
+        src: target/my-home-1.0-SNAPSHOT.jar
+        dest: /tmp/my-home.jar
